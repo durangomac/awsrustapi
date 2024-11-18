@@ -1,1 +1,1 @@
-# awsrustapi
+# AWS RUST API Project
