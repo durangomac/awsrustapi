@@ -25,7 +25,7 @@ async fn function_handler(event: Request) -> Result<Response<Body>, Error> {
     };
 
     // Initialize SES client
-    let config = aws_config::load_from_env().await;
+    let config = aws_config::load_defaults(aws_config::BehaviorVersion::latest()).await;
     let ses_client = Client::new(&config);
 
     // Prepare the email content
